@@ -1,0 +1,6 @@
+﻿  Source.c
+C:\Users\TEMP\source\repos\c_lab7\c_lab7\Source.c(9,10): warning C4473: "scanf_s": передано недостаточно аргументов для строки формата
+C:\Users\TEMP\source\repos\c_lab7\c_lab7\Source.c(9,10): message : заполнители и их параметры ожидают переменное число аргументов в количестве 2, но было предоставлено 1
+C:\Users\TEMP\source\repos\c_lab7\c_lab7\Source.c(9,10): message : отсутствующий вариативный аргумент "2" требуется для строки форматирования "%c"
+C:\Users\TEMP\source\repos\c_lab7\c_lab7\Source.c(9,10): message : этот аргумент используется в качестве размера буфера
+  c_lab7.vcxproj -> C:\Users\TEMP\source\repos\c_lab7\x64\Debug\c_lab7.exe
