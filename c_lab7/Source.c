@@ -1,6 +1,9 @@
 #define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
 #include <locale.h>
+#include <math.h>
+
+#define PI 3.1415926535
 
 void t1()
 {
@@ -82,17 +85,50 @@ void t2()
 void t3()
 {
 	char c;
-	printf("Площадь какой фигуры вы хотите вычислить?");
+	float res;
+	printf("Площадь какой фигуры вы хотите вычислить? ");
 	scanf("%c", &c);
 
 	switch (c)
 	{
 	case 't':
 	{
+		float a, b, c, p;
 		printf("Введите стороны треугольника ");
-		scanf("%f %f %f", &a, &b,)
+		scanf("%f %f %f", &a, &b, &c);
+		p = (a + b + c) / 2.;
+		res = pow(p * (p - a) * (p - b) * (p - c), 0.5);
+		break;
 	}
+	case 's':
+	{
+		float a;
+		printf("Введите сторону квадрата ");
+		scanf("%f", &a);
+		res = a * a;
+		break;
 	}
+	case 'o':
+	{
+		float r;
+		printf("Введите радиус круга ");
+		scanf("%f", &r);
+		res = PI * r * r;
+		break;
+	}
+	case 'r':
+	{
+		float a, b;
+		printf("Введите стороны прямоугольника ");
+		scanf("%f %f", &a, &b);
+		res = a * b;
+		break;
+	}
+	default:
+		printf("Такой фигуры нет в базе данных");
+	}
+
+	printf("Площадь равна %.1f", res);
 }
 
 int main()
