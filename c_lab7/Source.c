@@ -9,7 +9,7 @@ void t1()
 {
 	char c;
 	printf("Введите символ: ");
-	scanf_s("%c", &c);
+	scanf("%c", &c);
 
 	switch (c)
 	{
@@ -91,44 +91,47 @@ void t3()
 
 	switch (c)
 	{
-	case 't':
+	case 's': //квадрат
+	{
+		float a;
+		printf("Введите сторону квадрата ");
+		scanf("%f", &a);
+		res = a * a;
+		printf("Площадь равна %.1f", res);
+		break;
+	}
+	case 'r': //прямоугольник
+	{
+		float a, b;
+		printf("Введите стороны прямоугольника ");
+		scanf("%f %f", &a, &b);
+		res = a * b;
+		printf("Площадь равна %.1f", res);
+		break;
+	}
+	case 't': //треугольник
 	{
 		float a, b, c, p;
 		printf("Введите стороны треугольника ");
 		scanf("%f %f %f", &a, &b, &c);
 		p = (a + b + c) / 2.;
 		res = pow(p * (p - a) * (p - b) * (p - c), 0.5);
+		printf("Площадь равна %.1f", res);
 		break;
 	}
-	case 's':
-	{
-		float a;
-		printf("Введите сторону квадрата ");
-		scanf("%f", &a);
-		res = a * a;
-		break;
-	}
-	case 'o':
+	case 'o': //круг
 	{
 		float r;
 		printf("Введите радиус круга ");
 		scanf("%f", &r);
 		res = PI * r * r;
+		printf("Площадь равна %.1f", res);
 		break;
 	}
-	case 'r':
-	{
-		float a, b;
-		printf("Введите стороны прямоугольника ");
-		scanf("%f %f", &a, &b);
-		res = a * b;
-		break;
-	}
+	
 	default:
 		printf("Такой фигуры нет в базе данных");
 	}
-
-	printf("Площадь равна %.1f", res);
 }
 
 int main()
